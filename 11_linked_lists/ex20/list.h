@@ -5,19 +5,19 @@
 /*   By: shobeedev                             // but only understanding      */
 /*      <https://github.com/justshobee>        // makes it yours.             */
 /*                                                                            */
-/*   Created: 2026/08/22 09:01:16 by shobeedev // learn the why,              */
-/*   Updated: 2026/09/07 18:12:31 by shobeedev // not only the how.           */
+/*   Created: 2026/08/22 09:00:07 by shobeedev // learn the why,              */
+/*   Updated: 2026/09/11 09:57:23 by shobeedev // not only the how.           */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef LIST_H
 # define LIST_H
 
 struct st_node
 {
-	int		data;
-	struct st_node	*next;
+    struct st_node* prev;
+	int data;
+	struct st_node* next;
 };
 
 typedef struct st_node node;

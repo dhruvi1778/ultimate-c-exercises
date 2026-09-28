@@ -1,28 +1,15 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                           ____    _____    */
-/*   solution.c                                             |___ \  |___ /    */
-/*                                                            __) |   |_ \    */
-/*   By: shobeedev <https://shobee.space/>                   / __/   ___) |   */
-/*                                                          |_____| |____/    */
-/*   Created: 2026/03/05 11:25:34 by shobeedev               shobee4ever      */
-/*   Updated: 2026/03/05 11:35:10 by shobeedev            tfaaty fi l3oolaa   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
-
-int main()
+int main ()
 {
-	float princibal,rate,time;
-	princibal = 1000;//for example you wnat to put many in a bank this is 1000 dollars.
-	rate = 8;//this rate of the princibal of your many.
-	time = 3;//and this for time example 3 years.
-
-	float simpleInterset = (princibal * rate * time) / 100;
-
-	printf("Simeple Interest is : %.2f",simpleInterset);
-
+	float n,p,r,interest;
+	printf("Enter the principle amount:");
+	scanf("%f",&p);
+	printf("Enter the rate of interest:");
+	scanf("%f",&r);
+	printf("Enter the no. of years:");
+	scanf("%f",&n);
+	interest=(n*p*r)/100;
+	printf("The simple interest is %.3f",interest);
 	return 0;
 }
 

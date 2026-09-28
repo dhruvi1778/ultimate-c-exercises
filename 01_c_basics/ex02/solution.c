@@ -9,22 +9,18 @@
 /*   Updated: 2026/03/05 10:55:07 by shobeedev            tfaaty fi l3oolaa   */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-
-int main()
+#include <stdio.>
+int main ()
 {
 	int num1,num2;
-
-	printf("Enter  the first number : ");
-	scanf("%d",&num1);
-
-	printf("Enter the second number : ");
-	scanf("%d",&num2);
-
-	int sumTwoNbr = num1 + num2;
-
-	printf("the sum of %d and %d is : %d",num1,num2,sumTwoNbr);
-
+	int result;
+	printf("Enter the numbers :");
+	scanf("%d %d",&num1,&num2);
+	result=num1+num2;
+	printf("The addition is %d",result);
 	return 0;
 }
+	
+
+
+	

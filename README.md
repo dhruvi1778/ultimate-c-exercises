@@ -1,418 +1,334 @@
-# Ultimate C Exercises — 375+ Exercises!
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/justshobee/ultimate-c-exercises?style=for-the-badge)](https://github.com/justshobee/ultimate-c-exercises/stargazers)
-[![Exercises](https://img.shields.io/badge/Exercises-378-brightgreen?style=for-the-badge)](#)
+# Ultimate C Exercises
 
-**A comprehensive collection of 378 C programming exercises designed to solidify fundamental concepts through hands-on practice.**
+**400+ hands-on C exercises, from "Hello World" to pointers, linked lists, and function pointers.**
 
-*Perfect for beginners and anyone looking to master C programming from basics to advanced pointers, file handling, and intermediate systems programming!*
+[![Stars](https://img.shields.io/github/stars/justshobee/ultimate-c-exercises?style=for-the-badge)](https://github.com/justshobee/ultimate-c-exercises/stargazers)
+[![Exercises](https://img.shields.io/badge/Exercises-400%2B-brightgreen?style=for-the-badge)](#-topics-at-a-glance)
+[![Language](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)](#)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue?style=for-the-badge)](#-contributing)
+
+[Quick Start](#-quick-start) · [Topics](#-topics-at-a-glance) · [Learning Path](#-learning-path) · [Study Tips](#-study-tips) · [Contributing](#-contributing)
 
 </div>
 
 ---
 
-## Overview
+## 📖 About
 
-Welcome to **Ultimate C Exercises**! This repository is your go-to resource for learning and practicing the C programming language. Whether you're a complete beginner or looking to refresh your skills, you'll find carefully structured exercises that progressively build your understanding of core C concepts.
+This repository is a structured collection of C programming exercises. Each topic lives in its own numbered folder, and difficulty increases as you move forward, so you can follow the folders in order like a course.
 
-This collection covers everything from basic syntax to pointers, structs, unions, file handling, and intermediate system-level topics, providing hands-on practice for each fundamental pillar of C programming.
+**Who is it for?**
 
----
-
-## Key Features
-
-* **Structured Learning Path** — Exercises organized by topic with progressive difficulty levels  
-* **Beginner-Friendly** — Clear explanations and examples to help you get started  
-* **Comprehensive Coverage** — Topics range from basics to pointers, structs, unions, and file handling  
-* **Hands-on Practice** — Learn by doing with real coding challenges  
-* **Well-Organized** — Easy to navigate through different programming concepts  
-* **Extensive Exercises** — 378 exercises across 10 major topics
+| You are... | Start here |
+|---|---|
+| A complete beginner | `01_c_basics`, then follow the order |
+| Comfortable with basics | Jump to `05_arrays` or `07_pointers` |
+| Preparing for interviews / 42-style pools | Focus on `06_strings`, `07_pointers`, `11_linked_lists` |
 
 ---
 
-## Tech Stack
+## 🚀 Quick Start
 
-**Language:**  
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+### 1. Install a C compiler
 
-**Recommended Compilers:**  
-![GCC](https://img.shields.io/badge/GCC-C6C6C6?style=for-the-badge&logo=gnu-compiler-collection&logoColor=black)
-![Clang](https://img.shields.io/badge/Clang-FE6624?style=for-the-badge&logo=llvm&logoColor=white)
+| OS | Command |
+|---|---|
+| Ubuntu / Debian | `sudo apt-get install gcc` |
+| Fedora | `sudo dnf install gcc` |
+| macOS | `xcode-select --install` |
+| Windows | Install [MinGW](https://www.mingw-w64.org/) or use [WSL](https://learn.microsoft.com/windows/wsl/) |
 
----
-
-## Quick Start
-
-### Prerequisites
-
-To compile and run the C programs in this repository, you need:
-
-- **A C Compiler** (GCC, Clang, or MSVC)
-  - **Linux:** Usually pre-installed. If not: `sudo apt-get install gcc` (Ubuntu/Debian) or `sudo dnf install gcc` (Fedora)
-  - **macOS:** Install Xcode Command Line Tools: `xcode-select --install`
-  - **Windows:** Download and install [MinGW](http://www.mingw.org/) or use Windows Subsystem for Linux (WSL)
-
-### Installation & Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/justshobee/ultimate-c-exercises.git
-   cd ultimate-c-exercises
-   ```
-
-2. **Navigate to a section** (e.g., C Basics)
-   ```bash
-   cd 01_c_basics
-   ```
-
-3. **Choose an exercise** (e.g., ex01)
-   ```bash
-   cd ex01
-   ls -la
-   ```
-
-### Compiling & Running Your First Program
-
-Inside each exercise directory, you'll find `.c` source files. Here's how to compile and run them:
+### 2. Clone the repo
 
 ```bash
-# Compile the source file
-gcc solution.c -o solution
+git clone https://github.com/justshobee/ultimate-c-exercises.git
+cd ultimate-c-exercises
+```
 
-# Run the compiled executable
+### 3. Open an exercise, compile, run
+
+```bash
+cd 01_c_basics/ex01
+gcc -Wall -Wextra -std=c99 solution.c -o solution
 ./solution
 ```
 
-### Using Different Compilers
+> 💡 Always compile with `-Wall -Wextra`. The warnings teach you a lot.
+
+<details>
+<summary><b>More compile options (click to expand)</b></summary>
 
 ```bash
-# Using Clang instead of GCC
-clang solution.c -o solution
+# Clang instead of GCC
+clang -Wall -Wextra solution.c -o solution
 
-# Compile with warnings enabled (recommended)
-gcc -Wall -Wextra solution.c -o solution
+# Debug symbols (for gdb)
+gcc -g -Wall -Wextra solution.c -o solution
+
+# Memory error detection (great for pointers)
+gcc -g -fsanitize=address solution.c -o solution
+valgrind ./solution
+
+# Multi-file project
+gcc main.c utils.c -o program
 ```
+
+</details>
 
 ---
 
-## Project Structure
+## 🗂️ Topics at a Glance
+
+| # | Folder | Topics | Exercises |
+|:-:|---|---|:-:|
+| 01 | [`01_c_basics`](./01_c_basics) | Syntax, `printf`/`scanf`, operators, if/else | 48 |
+| 02 | [`02_variables_data_types`](./02_variables_data_types) | Types, `sizeof`, casting, scope | 21 |
+| 03 | [`03_loops`](./03_loops) | `for`, `while`, `do-while`, nested loops, patterns | 28 |
+| 04 | [`04_functions`](./04_functions) | Parameters, return values, recursion | 25 |
+| 05 | [`05_arrays`](./05_arrays) | 1D/2D arrays, sorting, searching | 40 |
+| 06 | [`06_strings`](./06_strings) | Char arrays, `<string.h>`, manipulation | 30 |
+| 07 | [`07_pointers`](./07_pointers) | `&`, `*`, arithmetic, `malloc`/`free` | 99 |
+| 08 | [`08_structs_unions`](./08_structs_unions) | `struct`, `union`, `typedef`, nested types | 22 |
+| 09 | [`09_file_handling`](./09_file_handling) | Text/binary files, `fseek`, error checks | 21 |
+| 10 | [`10_intermediate`](./10_intermediate) | Preprocessor, `argc/argv`, headers, bitwise, `enum` | 44 |
+| 11 | [`11_linked_lists`](./11_linked_lists) | Nodes, insert/delete, traversal, reversal | XX |
+| 12 | [`12_function_pointers`](./12_function_pointers) | Callbacks, function tables, `qsort`-style code | XX |
+| | | **Total** | **400+** |
+
+---
+
+## 🧭 Learning Path
+
+```
+Basics ─▶ Variables ─▶ Loops ─▶ Functions ─▶ Arrays ─▶ Strings
+                                                          │
+   ┌──────────────────────────────────────────────────────┘
+   ▼
+Pointers ─▶ Structs/Unions ─▶ File Handling ─▶ Intermediate ─▶ Linked Lists ─▶ Function Pointers
+```
+
+<details>
+<summary><b>01 · C Basics</b> — <i>1–2 weeks</i></summary>
+
+Hello World, program structure, `printf()` / `scanf()`, comments, arithmetic/relational/logical operators, `if / else`.
+
+**Best for:** absolute beginners.
+</details>
+
+<details>
+<summary><b>02 · Variables & Data Types</b> — <i>1 week</i></summary>
+
+Declaration and initialization, `int` / `float` / `double` / `char`, `sizeof`, type casting, variable scope.
+
+**Best for:** understanding how data is stored in memory.
+</details>
+
+<details>
+<summary><b>03 · Loops</b> — <i>1–2 weeks</i></summary>
+
+`for`, `while`, `do-while`, `break` / `continue`, nested loops, pattern printing.
+
+**Best for:** repetition and iteration, needed before arrays.
+</details>
+
+<details>
+<summary><b>04 · Functions</b> — <i>1–2 weeks</i></summary>
+
+Declaration vs definition, parameters, return types, scope and lifetime, recursion.
+
+**Best for:** writing modular, reusable code.
+</details>
+
+<details>
+<summary><b>05 · Arrays</b> — <i>2–3 weeks</i></summary>
+
+1D and 2D arrays, initialization, passing arrays to functions, sorting and searching algorithms.
+
+**Best for:** managing collections of data.
+</details>
+
+<details>
+<summary><b>06 · Strings</b> — <i>2 weeks</i></summary>
+
+Character arrays, `fgets()` / `puts()`, `strlen` / `strcpy` / `strcat` / `strcmp`, writing your own string functions.
+
+**Best for:** text processing.
+
+> ⚠️ Avoid `gets()`. It is unsafe and removed from the C11 standard. Use `fgets()`.
+</details>
+
+<details>
+<summary><b>07 · Pointers</b> — <i>3–4 weeks</i></summary>
+
+Address-of and dereference, pointer arithmetic, arrays and pointers, strings as pointers, pointers to pointers, dynamic memory (`malloc`, `calloc`, `realloc`, `free`), common pitfalls and debugging.
+
+**Best for:** unlocking the real power of C. This is the biggest section, so take your time.
+</details>
+
+<details>
+<summary><b>08 · Structs & Unions</b> — <i>2 weeks</i></summary>
+
+Defining structs, accessing members, nested structs, arrays of structs, pointers to structs, unions vs structs, `typedef`.
+
+**Best for:** building custom data types.
+</details>
+
+<details>
+<summary><b>09 · File Handling</b> — <i>2 weeks</i></summary>
+
+Modes (`r`, `w`, `a`, `rb`, `wb`), `fprintf` / `fscanf` / `fgets` / `fputs`, `fread` / `fwrite`, `feof` / `perror`, `fseek` / `ftell` / `rewind`.
+
+**Best for:** saving data beyond program runtime.
+</details>
+
+<details>
+<summary><b>10 · Intermediate Programming</b> — <i>2–3 weeks</i></summary>
+
+`#define`, `#ifdef` / `#ifndef`, command-line arguments, multi-file projects and header files, bitwise operators (`& | ^ ~ << >>`), `enum`.
+
+**Best for:** real-world project structure.
+</details>
+
+<details>
+<summary><b>11 · Linked Lists</b></summary>
+
+Node structures, insertion, deletion, traversal, searching, reversing, and memory management for dynamic lists.
+
+**Best for:** first step into data structures. Requires solid pointers and structs.
+</details>
+
+<details>
+<summary><b>12 · Function Pointers</b></summary>
+
+Declaring and calling function pointers, callbacks, arrays of function pointers, passing functions as arguments.
+
+**Best for:** flexible, generic C code.
+</details>
+
+---
+
+## 📁 Project Structure
 
 ```
 ultimate-c-exercises/
-├── 01_c_basics/                 # Hello World, syntax, basic I/O, comments (48 exercises)
-├── 02_variables_data_types/     # Variables, int, float, char, sizeof() (21 exercises)
-├── 03_loops/                    # for, while, do-while, nested loops (28 exercises)
-├── 04_functions/                # Function definition, parameters, return types (25 exercises)
-├── 05_arrays/                   # 1D arrays, 2D arrays, array operations (40 exercises)
-├── 06_strings/                  # String manipulation, character arrays, functions (30 exercises)
-├── 07_pointers/                 # Pointers basics, dereferencing, arrays of pointers (99 exercises)
-├── 08_structs_unions/           # Structs, unions, nested structures, typedef (22 exercises)
-├── 09_file_handling/            # File I/O, text/binary files, error checks (21 exercises)
-├── 10_intermediate/             # Preprocessors, command arguments, bitwise operations (44 exercises)
-└── README.md                    # You are here!
+├── 01_c_basics/
+├── 02_variables_data_types/
+├── 03_loops/
+├── 04_functions/
+├── 05_arrays/
+├── 06_strings/
+├── 07_pointers/
+├── 08_structs_unions/
+├── 09_file_handling/
+├── 10_intermediate/
+├── 11_linked_lists/
+├── 12_function_pointers/
+└── README.md
+```
+
+Each exercise folder contains the `.c` source file(s) for that exercise.
+
+---
+
+## 🎯 Study Tips
+
+- **Understand before moving on.** Know the "why", not just the syntax.
+- **Type the code yourself.** No copy-paste; it builds muscle memory.
+- **Practice daily.** 30–60 minutes beats a 5-hour weekend session.
+- **Test edge cases.** Empty input, zero, negative numbers, very large values.
+- **Debug systematically.** Trace with `printf()`, then use `gdb` or `valgrind`.
+- **Read the compiler messages.** They are trying to help you.
+- **Revisit old exercises.** Refactor them with what you know now.
+
+---
+
+## 🛠️ Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| `gcc: command not found` | Install a compiler (see [Quick Start](#-quick-start)) |
+| `undefined reference to ...` | Compile **all** the `.c` files: `gcc main.c utils.c -o program` |
+| `Segmentation fault` | Check pointers, array bounds, and uninitialized variables. Run with `valgrind` or `-fsanitize=address` |
+| Weird output / garbage values | Initialize your variables and compile with `-Wall -Wextra` |
+
+---
+
+## ✅ Progress Tracker
+
+Copy this into your own notes or fork and tick the boxes.
+
+- [ ] 01 · C Basics
+- [ ] 02 · Variables & Data Types
+- [ ] 03 · Loops
+- [ ] 04 · Functions
+- [ ] 05 · Arrays
+- [ ] 06 · Strings
+- [ ] 07 · Pointers
+- [ ] 08 · Structs & Unions
+- [ ] 09 · File Handling
+- [ ] 10 · Intermediate
+- [ ] 11 · Linked Lists
+- [ ] 12 · Function Pointers
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome: new exercises, fixes, better explanations, or clearer examples.
+
+1. **Fork** the repository
+2. **Create a branch:** `git checkout -b feature/your-feature`
+3. **Make your changes**
+4. **Commit:** `git commit -m "feat: add exercise on <topic>"`
+5. **Push:** `git push origin feature/your-feature`
+6. **Open a Pull Request**
+
+### Guidelines
+
+- Put new exercises in the matching topic folder, using the next number (e.g. `ex25`).
+- Write clean, commented code with consistent naming.
+- Include a short problem statement and example input/output in the file header.
+- Make sure it compiles without warnings using `gcc -Wall -Wextra -std=c99`.
+- Test your exercise before submitting.
+
+### Suggested exercise header
+
+```c
+/*
+ * Exercise: <short title>
+ * Topic:    <folder / concept>
+ * Level:    Easy | Medium | Hard
+ *
+ * Task:
+ *   <what the program must do>
+ *
+ * Example:
+ *   Input:  5
+ *   Output: 120
+ */
 ```
 
 ---
 
-## Course Outline & Learning Path
+## 💬 Support
 
-### 1. C Basics ([01_c_basics/](file:///home/shobee/Documents/Sky%20is%20not%20the%20limit/My%20Repo%20in%20github/ultimate-c-exercises/01_c_basics))
-**48 Exercises** | *Duration: 1-2 weeks*
-
-Start your C journey here! Learn fundamental concepts like program structure, printing output, accepting input, and working with operators.
-
-**Topics Covered:**
-- Hello World program
-- Basic syntax and structure
-- `printf()` and `scanf()` functions
-- Comments and code organization
-- Basic operators (arithmetic, relational, logical)
-- Conditional statements (if/else)
-
-**Best For:** Absolute beginners with no programming experience
+- 🐛 **Bug or mistake?** [Open an issue](https://github.com/justshobee/ultimate-c-exercises/issues)
+- 💡 **Idea or suggestion?** Open an issue or a discussion.
 
 ---
 
-### 2. Variables & Data Types ([02_variables_data_types/](file:///home/shobee/Documents/Sky%20is%20not%20the%20limit/My%20Repo%20in%20github/ultimate-c-exercises/02_variables_data_types))
-**21 Exercises** | *Duration: 1 week*
+## 🙏 Acknowledgments
 
-Understand how to store and manage data in your programs. Learn about different data types and how to use them effectively.
-
-**Topics Covered:**
-- Variable declaration and initialization
-- Data types: int, float, double, char
-- `sizeof()` operator
-- Type casting and conversion
-- Variable scope
-
-**Best For:** Understanding data storage and memory concepts
-
----
-
-### 3. Loops ([03_loops/](file:///home/shobee/Documents/Sky%20is%20not%20the%20limit/My%20Repo%20in%20github/ultimate-c-exercises/03_loops))
-**28 Exercises** | *Duration: 1-2 weeks*
-
-Master iteration concepts to repeat code blocks efficiently. This is essential for working with arrays and processing data.
-
-**Topics Covered:**
-- `for` loops
-- `while` loops
-- `do-while` loops
-- Loop control: `break` and `continue`
-- Nested loops
-- Loop patterns and techniques
-
-**Best For:** Learning iteration and repetition patterns
-
----
-
-### 4. Functions ([04_functions/](file:///home/shobee/Documents/Sky%20is%20not%20the%20limit/My%20Repo%20in%20github/ultimate-c-exercises/04_functions))
-**25 Exercises** | *Duration: 1-2 weeks*
-
-Learn to write reusable, organized code by mastering functions. Functions are building blocks of larger programs.
-
-**Topics Covered:**
-- Function definition and declaration
-- Parameters and return types
-- Scope and lifetime of variables
-- Recursive functions
-- Function libraries
-
-**Best For:** Writing modular and maintainable code
-
----
-
-### 5. Arrays ([05_arrays/](file:///home/shobee/Documents/Sky%20is%20not%20the%20limit/My%20Repo%20in%20github/ultimate-c-exercises/05_arrays))
-**40 Exercises** | *Duration: 2-3 weeks*
-
-Work with collections of data using arrays. Learn both single and multi-dimensional arrays.
-
-**Topics Covered:**
-- 1D arrays: declaration and usage
-- 2D arrays and matrices
-- Array initialization
-- Passing arrays to functions
-- Array algorithms (sorting, searching, etc.)
-
-**Best For:** Managing collections of data
-
----
-
-### 6. Strings ([06_strings/](file:///home/shobee/Documents/Sky%20is%20not%20the%20limit/My%20Repo%20in%20github/ultimate-c-exercises/06_strings))
-**30 Exercises** | *Duration: 2 weeks*
-
-Master string handling—one of the most important skills in C programming!
-
-**Topics Covered:**
-- String basics (character arrays)
-- String input/output (`gets()`, `puts()`, `fgets()`)
-- String library functions (`strlen()`, `strcpy()`, `strcat()`, etc.)
-- String manipulation and comparison
-- Common string problems and solutions
-
-**Best For:** Text processing and manipulation
-
----
-
-### 7. Pointers ([07_pointers/](file:///home/shobee/Documents/Sky%20is%20not%20the%20limit/My%20Repo%20in%20github/ultimate-c-exercises/07_pointers))
-**99 Exercises** | *Duration: 3-4 weeks*
-
-Pointers are what make C powerful! This advanced topic opens doors to dynamic memory, complex data structures, and more.
-
-**Topics Covered:**
-- Pointer basics: address-of (`&`) and dereference (`*`) operators
-- Pointer arithmetic
-- Arrays and pointers relationship
-- Pointers to functions
-- Dynamic memory allocation (`malloc()`, `free()`)
-- Strings as pointers
-- Pointer pitfalls and debugging
-
-**Best For:** Advanced programmers ready to unlock C's full potential
-
----
-
-### 8. Structs & Unions ([08_structs_unions/](file:///home/shobee/Documents/Sky%20is%20not%20the%20limit/My%20Repo%20in%20github/ultimate-c-exercises/08_structs_unions))
-**22 Exercises** | *Duration: 2 weeks*
-
-Learn to create custom data types and organize related data. Master structures and unions for building complex data models.
-
-**Topics Covered:**
-- Structure definition and declaration
-- Accessing structure members
-- Nested structures
-- Arrays of structures
-- Pointers to structures
-- Unions and their differences from structs
-- `typedef` for custom types
-
-**Best For:** Building complex data types and preparing for advanced data structures
-
----
-
-### 9. File Handling ([09_file_handling/](file:///home/shobee/Documents/Sky%20is%20not%20the%20limit/My%20Repo%20in%20github/ultimate-c-exercises/09_file_handling))
-**21 Exercises** | *Duration: 2 weeks*
-
-Learn how to persist data beyond program runtime by reading and writing files.
-
-**Topics Covered:**
-- File opening modes (`r`, `w`, `a`, `rb`, `wb`)
-- Reading and writing text files (`fprintf`, `fscanf`, `fgets`, `fputs`)
-- Working with binary files (`fread`, `fwrite`)
-- EOF checks and error checking (`perror`, `feof`)
-- Position markers inside files (`fseek`, `ftell`, `rewind`)
-
-**Best For:** Saving application state and working with files
-
----
-
-### 10. Intermediate Programming & Macros ([10_intermediate/](file:///home/shobee/Documents/Sky%20is%20not%20the%20limit/My%20Repo%20in%20github/ultimate-c-exercises/10_intermediate))
-**44 Exercises** | *Duration: 2-3 weeks*
-
-Take your skills further with multi-file project setups, preprocessors, command line arguments, and bitwise manipulation.
-
-**Topics Covered:**
-- Preprocessor directives (`#define`, `#ifdef`, `#ifndef`)
-- Command line arguments (`argc`, `argv`)
-- Multi-file compilation and custom headers (`.h` files)
-- Bitwise operators (`&`, `|`, `^`, `~`, `<<`, `>>`)
-- Typedefs, enumerations (`enum`), and advanced control logic
-
-**Best For:** Mastering production-ready system configurations in C
-
----
-
-## How to Use This Repository
-
-### For Absolute Beginners
-
-1. **Start with Section 1:** Begin with `01_c_basics/` and work through exercises sequentially
-2. **Follow the order:** Don't skip sections—each builds on previous concepts
-3. **Practice consistently:** Spend 30-60 minutes daily on exercises
-4. **Type it out:** Don't copy-paste; type every line to build muscle memory
-5. **Experiment:** Modify exercises and create variations to deepen understanding
-
-### For Experienced Programmers
-
-- Jump to relevant sections based on your learning goals
-- Use as a reference for C-specific patterns
-- Challenge yourself with advanced exercises in each section
-- Use as interview preparation
-
-### Study Tips
-
-* **Understand before moving on** — Don't memorize, understand the "why"  
-* **Write clean code** — Use meaningful variable names and comments  
-* **Test your code** — Try different inputs, including edge cases  
-* **Debug systematically** — Use `printf()` to trace variable values  
-* **Read error messages** — They're trying to help you!  
-* **Revisit basics** — Go back and refactor old exercises with new knowledge  
-
----
-
-## Compilation Best Practices
-
-### Enable Compiler Warnings
-```bash
-gcc -Wall -Wextra -std=c99 program.c -o program
-```
-
-### Explanation of flags:
-- `-Wall` — Enable all common warnings
-- `-Wextra` — Enable extra warnings
-- `-std=c99` — Use C99 standard (recommended for modern C)
-
-### Debug Mode (for troubleshooting)
-```bash
-gcc -g -Wall -Wextra program.c -o program
-```
-
----
-
-## Common Issues & Solutions
-
-### Issue: "gcc: command not found"
-**Solution:** Install a C compiler (see Prerequisites section)
-
-### Issue: "error: undefined reference to..."
-**Solution:** Make sure you're compiling all `.c` files if there are multiple
-
-### Issue: Program crashes or has unexpected output
-**Solution:** 
-- Add `printf()` statements to trace execution
-- Check array bounds and pointer validity
-- Use tools like `valgrind` to detect memory issues
-
----
-
-## Contributing
-
-We welcome contributions! If you have:
-- New exercises or topics to add
-- Improvements to existing exercises
-- Bug fixes or clarifications
-- Better explanations or examples
-
-**Please follow these steps:**
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Make your changes
-4. Commit: `git commit -m 'feat: Add new exercise on topic X'`
-5. Push: `git push origin feature/your-feature`
-6. Open a Pull Request
-
-**Guidelines:**
-- Write clear, commented C code
-- Follow consistent naming conventions
-- Include example input/output
-- Test your exercises before submitting
-
----
-
-## Acknowledgments
-
-- Inspired by numerous online C programming tutorials and courses
-- Thanks to the open-source community for excellent tools like GCC and Clang
-- Special thanks to all contributors and learners
-
----
-
-## Support & Contact
-
-Have questions or found an issue?
-
-- **Email:** Open an issue on GitHub
-- **Bug Report:** [GitHub Issues](https://github.com/justshobee/ultimate-c-exercises/issues)
-- **Suggestions:** Feel free to open a discussion or issue
-
----
-
-## Progress Tracker
-
-Keep track of your progress! Here's a template:
-
-- [ ] 01_c_basics (all 48 exercises)
-- [ ] 02_variables_data_types (all 21 exercises)
-- [ ] 03_loops (all 28 exercises)
-- [ ] 04_functions (all 25 exercises)
-- [ ] 05_arrays (all 40 exercises)
-- [ ] 06_strings (all 30 exercises)
-- [ ] 07_pointers (all 99 exercises)
-- [ ] 08_structs_unions (all 22 exercises)
-- [ ] 09_file_handling (all 21 exercises)
-- [ ] 10_intermediate (all 44 exercises)
+Thanks to the open-source community for tools like GCC and Clang, and to every contributor and learner who helps improve this repo.
 
 ---
 
 <div align="center">
 
-**Star this repo if it helps you on your C programming journey!**
+**If this repo helps you, please ⭐ star it!**
 
-*Made with dedication for C learners worldwide*
-
-By justshobee
+Made with dedication for C learners worldwide · by [justshobee](https://github.com/justshobee)
 
 </div>

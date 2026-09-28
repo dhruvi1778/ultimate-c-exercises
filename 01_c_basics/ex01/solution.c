@@ -9,16 +9,12 @@
 /*   Updated: 2026/03/05 10:43:51 by shobeedev            tfaaty fi l3oolaa   */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
-
 int main()
 {
-	float nbr;
-	printf("Enter a floating-point number : ");
-	scanf("%f",&nbr);
-
-	printf("\nThe number rounded to two decimal places is: %.2f",nbr);
-
+	float num;
+	printf("Enter a floating point number:");
+	scanf("%f",&num);
+	printf("%.2f",num);
 	return 0;
 }

@@ -9,24 +9,16 @@
 /*   Updated: 2026/03/05 11:05:09 by shobeedev            tfaaty fi l3oolaa   */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
-void PrintCalc(int a,int b)
+int main ()
 {
-	printf("%d + %d = %d\n",a,b,a+b);
-	printf("%d - %d = %d\n",a,b,a-b);
-	printf("%d * %d = %d\n",a,b,a*b);
-	float dev = a / b;
-	printf("%d / %d = %.2f\n",a,b,dev);
-}
-
-int main()
-{
-	int a,b;
-	a = 20;
-	b = 10;
-
-	PrintCalc(a,b);
-
+	int a=10;
+	int b=20;
+	printf("The sum is %d + %d=%d\n",a,b,a+b);
+	printf("The difference is %d-%d=%d\n",a,b,a-b);
+	printf("The multiplication is %d*%d=%d\n",a,b,a*b);
+	float x=20;
+	float y=10;
+	printf("The division is %.2f/%.2f=%.2f\n",x,y,x/y);
 	return 0;
 }

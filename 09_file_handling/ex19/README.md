@@ -1,25 +1,25 @@
 # Exercise 19: Simple Decryption (Caesar Cipher)
-
+ 
 ## Description
-Implement the corresponding decryption for the file (encrypted.txt) created in Exercise 19. The program should read the encrypted file and write the original plaintext to a new file (decrypted.txt).
-
+Implement the matching decryption for the file `encrypted.txt` created in **Exercise 18**. Read the encrypted file, shift every letter back by 3 (with wrap-around), and write the original text to `decrypted.txt`.
+ 
 ## Assignment File
 - `solution.c`
-
 ## Expected Files
-- `decrypted.txt`
-- `encrypted.txt`
 - `solution.c`
-- `students.dat`
-
+- `encrypted.txt`
+- `decrypted.txt`
 ## Allowed Functions
-- None (Only standard operators/keywords)
-
+- `open`, `read`, `write`, `close`
 ## Examples
-### Expected Output
+### Given (`encrypted.txt`)
 ```text
-decrypted.txt
-
+Qdph: Dolfh Mrkqvrq
+Djh: 30 bhduv
+```
+ 
+### Expected content of `decrypted.txt`
+```text
 Name: Alice Johnson
 Age: 30 years
 ```

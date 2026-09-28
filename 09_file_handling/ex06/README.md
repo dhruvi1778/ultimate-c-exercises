@@ -1,19 +1,21 @@
 # Exercise 6: Count Words in a File
-
+ 
 ## Description
-Read a any text file (e.g., data.txt updated in Exercise 3) and count the total number of words. Assume words are separated by spaces, tabs, or newlines.
-
+Read a text file (for example `data.txt` from Exercise 3) and count the total number of words. Words are separated by one or more **spaces, tabs or newlines**. The filename is given as the **first command-line argument**.
+ 
 ## Assignment File
 - `solution.c`
-
 ## Expected Files
-- `data.txt`
 - `solution.c`
-
+- `data.txt`
 ## Allowed Functions
-- None (Only standard operators/keywords)
-
+- `open`, `read`, `write`, `close`
 ## Examples
+### Command
+```text
+./a.out data.txt
+```
+ 
 ### Expected Output
 ```text
 Total number of words in the file: 12

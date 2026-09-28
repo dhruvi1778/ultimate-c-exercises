@@ -114,11 +114,6 @@ Always close your descriptors when done.
 | 19 | Simple Decryption (Caesar Cipher) | [ex19](https://github.com/justshobee/ultimate-c-exercises/tree/main/09_file_handling/ex19) |
 | 20 | Write Student Record | [ex20](https://github.com/justshobee/ultimate-c-exercises/tree/main/09_file_handling/ex20) |
 | 21 | Determine File Size | [ex21](https://github.com/justshobee/ultimate-c-exercises/tree/main/09_file_handling/ex21) |
-| 22 | List Directory Contents | [ex22](https://github.com/justshobee/ultimate-c-exercises/tree/main/09_file_handling/ex22) |
-| 23 | Delete a File | [ex23](https://github.com/justshobee/ultimate-c-exercises/tree/main/09_file_handling/ex23) |
-| 24 | Rename a File | [ex24](https://github.com/justshobee/ultimate-c-exercises/tree/main/09_file_handling/ex24) |
-| 25 | Check File Permissions | [ex25](https://github.com/justshobee/ultimate-c-exercises/tree/main/09_file_handling/ex25) |
-| 26 | Binary File Read/Write | [ex26](https://github.com/justshobee/ultimate-c-exercises/tree/main/09_file_handling/ex26) |
 
 ---
 

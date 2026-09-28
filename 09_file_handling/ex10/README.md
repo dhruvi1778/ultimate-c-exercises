@@ -1,18 +1,15 @@
 # Exercise 10: Read Numbers and Calculate Sum
-
+ 
 ## Description
-Read the sequence of integers from the file numbers.txt (created in Exercise 9) and calculate and display their total sum.
-
+Read the sequence of integers from `numbers.txt` (created in Exercise 9), parse them yourself character by character (numbers are separated by whitespace and may be negative), and display their total sum.
+ 
 ## Assignment File
 - `solution.c`
-
 ## Expected Files
-- `data.txt`
 - `solution.c`
-
+- `numbers.txt`
 ## Allowed Functions
-- None (Only standard operators/keywords)
-
+- `open`, `read`, `write`, `close`
 ## Examples
 ### Expected Output
 ```text

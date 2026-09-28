@@ -1,28 +1,36 @@
 # Exercise 14: Replace Word in a File
-
+ 
 ## Description
-Read a any text file (you can refer data.txt updated in exercise 3) and replace all occurrences of a specific word (e.g., “the”) with a new word (e.g., “a”) and save the result to a new file (modified.txt).
-
+Read a text file and replace **every whole-word, case-sensitive occurrence** of a word with a new word, saving the result to `modified.txt`. Spaces, tabs and newlines must be preserved exactly as in the original.
+ 
+The program receives three command-line arguments:
+ 
+```text
+./a.out <input_file> <old_word> <new_word>
+```
+ 
 ## Assignment File
 - `solution.c`
-
 ## Expected Files
-- `data.txt`
-- `modified.txt`
 - `solution.c`
-
+- `sample.txt`
+- `modified.txt`
 ## Allowed Functions
-- None (Only standard operators/keywords)
-
+- `open`, `read`, `write`, `close`
 ## Examples
-### Given
+### Command
 ```text
-sample.txt
-
+./a.out sample.txt the a
+```
+ 
+### Given (`sample.txt`)
+```text
 The mouse that the cat hit that the dog bit that the fly landed on ran away
 ```
-
-### Expected Output
+ 
+### Expected content of `modified.txt`
 ```text
 The mouse that a cat hit that a dog bit that a fly landed on ran away
 ```
+ 
+> Note: `The` (capital T) is not replaced, because the match is case-sensitive.

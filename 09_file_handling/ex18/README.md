@@ -1,32 +1,28 @@
 # Exercise 18: Simple Encryption (Caesar Cipher)
-
+ 
 ## Description
-Implement a simple Caesar cipher (shift by N=13 or rot13) to encrypt the contents of an input file (plain.txt) and write the result to an output file (encrypted.txt). Only alphabet characters (A-Z, a-z) should be shifted; all others should be written as is.
-
+Implement a Caesar cipher with a **shift of 3** to encrypt the content of `plain.txt` and write the result to `encrypted.txt`.
+ 
+- Only letters (`A-Z`, `a-z`) are shifted; all other characters are written unchanged.
+- The shift wraps around the alphabet (`x` → `a`, `Y` → `B`).
+- Uppercase stays uppercase, lowercase stays lowercase.
 ## Assignment File
 - `solution.c`
-
 ## Expected Files
-- `data.txt`
-- `encrypted.txt`
 - `solution.c`
-
+- `plain.txt`
+- `encrypted.txt`
 ## Allowed Functions
-- None (Only standard operators/keywords)
-
+- `open`, `read`, `write`, `close`
 ## Examples
-### Given
+### Given (`plain.txt`)
 ```text
-plain.txt
-
 Name: Alice Johnson
 Age: 30 years
 ```
-
-### Expected Output
+ 
+### Expected content of `encrypted.txt`
 ```text
-encrypted.txt
-
 Qdph: Dolfh Mrkqvrq
 Djh: 30 bhduv
 ```

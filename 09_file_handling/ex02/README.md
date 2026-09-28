@@ -1,18 +1,14 @@
 # Exercise 2: Read and Display File Content
-
+ 
 ## Description
-Read the entire content of the existing file data.txt (created in Exercise 1) and display it line by line on the console using fscanf() or fgets().
-
+Read the entire content of `data.txt` (created in Exercise 1) and display it on the console. Read the file in chunks using `read()` (for example a 1024-byte buffer) and output each chunk with `write(1, ...)` until `read()` returns `0`.
+ 
 ## Assignment File
 - `solution.c`
-
 ## Expected Files
-- `data.txt`
 - `solution.c`
-
 ## Allowed Functions
-- None (Only standard operators/keywords)
-
+- `open`, `read`, `write`, `close`
 ## Examples
 ### Expected Output
 ```text

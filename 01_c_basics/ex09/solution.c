@@ -1,27 +1,21 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                           ____    _____    */
-/*   solution.c                                             |___ \  |___ /    */
-/*                                                            __) |   |_ \    */
-/*   By: shobeedev <https://shobee.space/>                   / __/   ___) |   */
-/*                                                          |_____| |____/    */
-/*   Created: 2026/03/05 17:01:08 by shobeedev               shobee4ever      */
-/*   Updated: 2026/03/05 17:03:26 by shobeedev            tfaaty fi l3oolaa   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
-
-int main()
+int main ()
 {
-	int num ;
-	printf("Enter a number : ");
+	
+	int num;
+	printf("Enter the number you want to check:");
 	scanf("%d",&num);
-
-	if(num % 2 == 0)
-		printf("%d is an EVEN number.\n",num);
+	if(num%2==0)
+	{
+			printf("The number is even");
+	}
+	else if(num==0)
+	{
+			printf("The number is zero");
+	}
 	else
-		printf("%d is an ODD number.\n",num);
-
-	return 0;
+	{
+			printf("The number is odd");
+	}
+	return 0
 }

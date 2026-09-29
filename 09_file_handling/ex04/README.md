@@ -1,18 +1,15 @@
 # Exercise 4: Count Characters in a File
-
+ 
 ## Description
-Write a program to read a text file (e.g., data.txt updated in Exercise 3) character by character and count the total number of characters in it, including spaces and newlines.
-
+Read `data.txt` (as updated in Exercise 3) using `read()` and count the total number of characters, **including spaces and newlines**. Display the result with your own `ft_putnbr` function.
+ 
 ## Assignment File
 - `solution.c`
-
 ## Expected Files
-- `data.txt`
 - `solution.c`
-
+- `data.txt`
 ## Allowed Functions
-- None (Only standard operators/keywords)
-
+- `open`, `read`, `write`, `close`
 ## Examples
 ### Expected Output
 ```text

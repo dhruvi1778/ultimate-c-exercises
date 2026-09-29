@@ -1,24 +1,19 @@
 # Exercise 7: Copy File
-
+ 
 ## Description
-Create a program to copy the entire content of a source file (data.txt updated in Exercise 3) to a destination file (destination.txt).
-
+Copy the entire content of a source file (`data.txt` from Exercise 3) into a destination file (`destination.txt`). Use a buffer with `read()` and `write()`, and handle partial reads correctly (write exactly the number of bytes returned by `read()`).
+ 
 ## Assignment File
 - `solution.c`
-
 ## Expected Files
-- `data.txt`
-- `dest.txt`
 - `solution.c`
-
+- `data.txt`
+- `destination.txt`
 ## Allowed Functions
-- None (Only standard operators/keywords)
-
+- `open`, `read`, `write`, `close`
 ## Examples
-### Expected Output
+### Content of `destination.txt`
 ```text
-destination.txt
-
 Name: Alice Johnson
 Age: 30 years
 Date Appended: 2025-10-15

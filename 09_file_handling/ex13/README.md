@@ -1,23 +1,25 @@
 # Exercise 13: Search for a Word
-
+ 
 ## Description
-Prompt the user to enter a filename (you can refer data.txt updated in Exercise 3) and a target word. Read the specified file and report the total number of times that target word appears in the file. Assume the file contains words separated by spaces or newlines.
-
+Prompt the user to enter a filename and a target word (both read from stdin with `read(0, ...)`). Read the specified file and report how many times the target word appears.
+ 
+Rules:
+- Words are separated by spaces, tabs or newlines.
+- The match is **exact and case-sensitive** (`Johnson` does not match `johnson` or `Johnsons`).
+- Punctuation attached to a word is part of that word.
+- If the file cannot be opened, print an error to stderr and return `1`.
 ## Assignment File
 - `solution.c`
-
 ## Expected Files
-- `data.txt`
 - `solution.c`
-
+- `data.txt`
 ## Allowed Functions
-- None (Only standard operators/keywords)
-
+- `open`, `read`, `write`, `close`
 ## Examples
 ### Expected Output
 ```text
 Enter the filename: data.txt
 Enter the word to search: Johnson
-
+ 
 The word 'Johnson' appears 1 times in 'data.txt'.
 ```

@@ -1,19 +1,21 @@
 # Exercise 5: Count Lines in a File
-
+ 
 ## Description
-Read a any text file (e.g., data.txt updated in Exercise 3) and count the total number of lines in it. (A line is typically counted by the presence of the newline character \n).
-
+Read a text file (for example `data.txt` from Exercise 3) and count the total number of lines. A line is counted for each newline character `'\n'`. The filename is given as the **first command-line argument**.
+ 
 ## Assignment File
 - `solution.c`
-
 ## Expected Files
-- `data.txt`
 - `solution.c`
-
+- `data.txt`
 ## Allowed Functions
-- None (Only standard operators/keywords)
-
+- `open`, `read`, `write`, `close`
 ## Examples
+### Command
+```text
+./a.out data.txt
+```
+ 
 ### Expected Output
 ```text
 Total number of lines in the file: 4

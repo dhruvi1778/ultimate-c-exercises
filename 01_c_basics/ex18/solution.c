@@ -1,45 +1,30 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                           ____    _____    */
-/*   solution.c                                             |___ \  |___ /    */
-/*                                                            __) |   |_ \    */
-/*   By: shobeedev <https://shobee.space/>                   / __/   ___) |   */
-/*                                                          |_____| |____/    */
-/*   Created: 2026/03/06 10:53:15 by shobeedev               shobee4ever      */
-/*   Updated: 2026/03/06 11:11:23 by shobeedev            tfaaty fi l3oolaa   */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
-
-int main()
+int main ()
 {
-	int nbr;
+	int num;
+	printf("----Menu----");
 	do
 	{
-		printf("-----MENU -----\n");
-		printf("1. Greet\n");
-		printf("2. Say Goodbye\n");
-		printf("3. Exit\n");
-
-		printf("Enter your option : ");
-		scanf("%d",&nbr);
-		switch(nbr)
+		printf("1.Greet\n2.Goodbye\n3.Exit\n\n");
+		scanf("%d",&num);
+		
+		switch(num)
 		{
 			case 1:
-				printf("Hello! Welcome to the program.\n\n");
+				printf("Hello! Welcome to the program..");
 				break;
 			case 2:
-				printf("Goodbye! Have a nice day.\n\n");
+				printf("Goodbye! Have a nice day..");
 				break;
 			case 3:
-				printf("Exiting program. Thank you!\n");
+				printf("Exiting the program..");
 				break;
 			default:
-				printf("Invalid choice !\n");
+				printf("Invalid Option");
 		}
-
-	}while(nbr != 3);
-
+	}
+	while(num!=3)
 	return 0;
 }
+
+		
